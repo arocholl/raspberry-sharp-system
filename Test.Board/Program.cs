@@ -14,7 +14,7 @@ namespace Test.Board
             else
             {
                 Console.WriteLine("Raspberry Pi running on {0} processor", board.Processor);
-                Console.WriteLine("Firmware rev{0}, board model {1} ({2})", board.Firmware, board.Model, board.Model.GetDisplayName() ?? "Unknown");
+                Console.WriteLine("Firmware rev{0}, board model {1} ({2})", board.Firmware, board.Model, ModelExtensionMethods.GetDisplayName(board.Model) ?? "Unknown");
                 Console.WriteLine();
                 Console.WriteLine("Serial number: {0}", board.SerialNumber);
             }
